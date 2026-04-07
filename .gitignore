@@ -1,0 +1,36 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables (CRITICAL for APIs)
+.env
+.flaskenv
+local_settings.py
+
+# Database
+db.sqlite3
+
+# Media and Static
+media/
+staticfiles/
+
+# Testing and Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

@@ -1,0 +1,12 @@
+asgiref==3.11.1
+Django==6.0.3
+django-filter==25.2
+django-rest-framework-nested==0.0.1
+django-unfold==0.87.0
+djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
+drf-nested-routers==0.95.0
+pillow==12.1.1
+PyJWT==2.11.0
+python-decouple==3.8
+sqlparse==0.5.5
