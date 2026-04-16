@@ -48,3 +48,6 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             "bio",
             "profile_image"
         ]
+        extra_kwargs = {
+            "email": {"read_only": True}
+        }

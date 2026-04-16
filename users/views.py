@@ -33,14 +33,8 @@ class UserProfileViewSet(ReadOnlyModelViewSet):
     def get_queryset(self):
         return self.queryset.filter(user=self.request.user)
 
-
-class RetrieveUpdateAPIView(APIView):
+class UpdateAPIView(APIView):
     permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        profile, created = Profile.objects.get_or_create(user=request.user)
-        serializer = ProfileSerializer(profile)
-        return Response(serializer.data)
     
     def put(self, request):
         serializer = UpdateUserSerializer(
