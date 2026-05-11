@@ -21,8 +21,8 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['name', 'description']
     ordering_fields = ['price']
     pagination_class = PageNumberPagination
-    lookup_field = 'slug'
-
+    # lookup_field = 'slug'
+    
 
 
 

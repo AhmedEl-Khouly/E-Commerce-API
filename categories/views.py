@@ -6,12 +6,13 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from products.serializers import ProductSerializer
 from rest_framework import status
-
+from django_filters.rest_framework import DjangoFilterBackend
 
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = [IsAdminUserOrReadOnly]
+    filter_backends = [DjangoFilterBackend]
     lookup_field = 'slug'
 
     @action(detail=True, methods=['get'])

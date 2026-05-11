@@ -14,7 +14,7 @@ class Cart(models.Model):
         return sum(item.product.price * item.quantity for item in self.items.all())
 
     def __str__(self):
-        return f"Cart {self.id} for {self.user.username}"
+        return f"Cart {self.id} for {self.user.first_name.capitalize()} {self.user.last_name.capitalize()}"
     
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
